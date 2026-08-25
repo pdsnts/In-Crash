@@ -6,4 +6,6 @@ public class Player : MonoBehaviour
     public int = 12;
     public int = 4;
     public float = 2;
+    public string "AulaGitHubRenatoVictor";
+    public int = 10;
 }
