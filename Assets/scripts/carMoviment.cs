@@ -9,4 +9,5 @@ public class Player : MonoBehaviour
     public string "AulaGitHubRenatoVictor";
     public int = 10;
     public float = 4.1f;
+    Vector3;
 }
