@@ -12,4 +12,5 @@ public class Player : MonoBehaviour
     public float = 4.1f;
     Vector3;
     Vector2 * velocity;
+    private string "TungTungTungRisada";
 }  
