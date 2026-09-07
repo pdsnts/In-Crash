@@ -34,6 +34,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitButton()
     {
+        UnityEngine.Debug.Log("Sair do jogo");
         Application.Quit();
     }
 }

@@ -1,0 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerInteract : MonoBehaviour
+{
+    private DialogueManager dialogueManager;
+
+    private void Start()
+    {
+        dialogueManager = FindObjectOfType<DialogueManager>();
+    }
+
+    private void Update()
+    {
+        if (dialogueManager != null && dialogueManager.IsDialogueActive)
+        {
+            return;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E)) {
+            float interactRange = 2f;
+            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+            foreach (Collider collider in colliderArray) {
+                if (collider.TryGetComponent(out NPCInteractable npcInteractable))
+                {
+                    npcInteractable.Interact();
+                    break;
+                }
+            }
+        }     
+    }
+
+    public NPCInteractable GetInteractableObject()
+    {
+        if (dialogueManager != null && dialogueManager.IsDialogueActive)
+        {
+            return null;
+        }
+
+        float interactRange = 2f;
+        Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+        foreach (Collider collider in colliderArray)
+        {
+            if (collider.TryGetComponent(out NPCInteractable npcInteractable))
+            {
+                return npcInteractable;
+            }
+        }
+        return null;
+    }
+}
