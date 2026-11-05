@@ -1,55 +1,43 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     CharacterController controller;
 
-    // Movement variables
-    Vector3 forward;
-    Vector3 vertical;
-    Vector3 strafe;
+    Vector3 velocity;
 
-    // Speed variables
-    float forwardSpeed = 5f;
-    float strafeSpeed = 5f;
-
-    // Jumping variables
-    float gravity;
-    float jumpSpeed;
-    float maxJumpHeight = 2f;
-    float timeToJumpApex = 0.5f;
+    public float speed = 5f;
+    public float gravity = -9.81f;
+    public float jumpHeight = 2f;
 
     void Start()
     {
         controller = GetComponent<CharacterController>();
-
-        gravity = (-2 * maxJumpHeight) / (timeToJumpApex * timeToJumpApex);
-        jumpSpeed = (2 * maxJumpHeight) / timeToJumpApex;
     }
 
     void Update()
     {
-        float forwardInput = Input.GetAxis("Vertical");
-        float strafeInput = Input.GetAxis("Horizontal");
+        float x = Input.GetAxis("Horizontal");
+        float z = Input.GetAxis("Vertical");
 
-        // force = input * speed * direction
-        forward = forwardInput * forwardSpeed * transform.forward;
-        strafe = strafeInput * strafeSpeed * transform.right;
+        Vector3 move = transform.right * x + transform.forward * z;
 
-        vertical += gravity * Time.deltaTime * Vector3.up;
+        controller.Move(move * speed * Time.deltaTime);
 
-        if (controller.isGrounded)
+        if (controller.isGrounded && velocity.y < 0)
         {
-            vertical = Vector3.down;
+            velocity.y = -2f;
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && controller.isGrounded)
         {
-            vertical = jumpSpeed * Vector3.up;
+            velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
         }
 
-        Vector3 finalVelocity = forward + vertical + strafe;
-        controller.Move(finalVelocity * Time.deltaTime);
+        velocity.y += gravity * Time.deltaTime;
+
+        controller.Move(velocity * Time.deltaTime);
     }
 }
