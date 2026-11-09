@@ -11,13 +11,12 @@ GameObject:
   - component: {fileID: 1919739021331822517}
   - component: {fileID: 996331206010574088}
   - component: {fileID: 4952443446193227758}
-  - component: {fileID: 965343168597205689}
   m_Layer: 0
   m_Name: Circle.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1919739021331822517
 Transform:
@@ -84,28 +83,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &965343168597205689
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8129226750630958639}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 8314571269056883277, guid: 684e911e4e7dae644b4e4d5305c45e8d, type: 3}
 --- !u!1 &8334008899752318951
 GameObject:
   m_ObjectHideFlags: 0
@@ -118,13 +95,13 @@ GameObject:
   - component: {fileID: 7650857141461724613}
   - component: {fileID: 2290273337696149330}
   - component: {fileID: 6570759731864494479}
-  - component: {fileID: 1523484299190141980}
+  - component: {fileID: 1544112833971444152}
   m_Layer: 0
   m_Name: tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1808409843522069070
 Transform:
@@ -135,7 +112,7 @@ Transform:
   m_GameObject: {fileID: 8334008899752318951}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: 118.97894, y: -232.50871, z: 258.47452}
+  m_LocalPosition: {x: 119.57, y: -232.50871, z: 258.47452}
   m_LocalScale: {x: 100, y: 99.999985, z: 99.999985}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -210,8 +187,8 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers: []
   m_Enabled: 1
---- !u!64 &1523484299190141980
-MeshCollider:
+--- !u!136 &1544112833971444152
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -228,7 +205,8 @@ MeshCollider:
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -2124705421725058983, guid: 684e911e4e7dae644b4e4d5305c45e8d, type: 3}
+  serializedVersion: 2
+  m_Radius: 0.01
+  m_Height: 0.046048228
+  m_Direction: 2
+  m_Center: {x: 0, y: -1.7768859e-17, z: 0.00800048}
