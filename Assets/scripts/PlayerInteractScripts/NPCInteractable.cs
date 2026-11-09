@@ -1,17 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
-public class NPCInteractable : MonoBehaviour
+public class NPCInteractable : MonoBehaviour, IInteractable
 {
-    [SerializeField] private string interactText;
+    [SerializeField] private string interactText = "Falar com NPC";
+
     public void Interact()
     {
         FindObjectOfType<DialogueManager>().ShowDialogue("Olá, aventureiro!");
     }
 
-    public string  GetInteractText()
+    public string GetInteractText()
     {
         return interactText;
     }

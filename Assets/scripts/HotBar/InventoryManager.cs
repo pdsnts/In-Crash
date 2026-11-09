@@ -63,7 +63,7 @@ public bool AdicionarItem(ItemData novoItem)
             // Atualiza a UI se a referência estiver atribuída
             if (hotbarUI != null)
             {
-                hotbarUI.AtualizarTodaUI();
+                hotbarUI.UpdateUI();
             }
             
             return true;

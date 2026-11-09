@@ -3,28 +3,19 @@ using UnityEngine.UI;
 
 public class UIHotbarSlot : MonoBehaviour
 {
-    public Image iconImage;
-    public Image highlightBorder;
+    [SerializeField] private Image iconImage; // O componente de imagem que arrastaste no passo anterior
 
-    public void ConfigurarSlot(Sprite icone)
+    public void UpdateSlot(ItemData item)
     {
-        if (icone != null)
+        if (item != null && item.icon != null)
         {
-            iconImage.sprite = icone;
-            iconImage.enabled = true;
+            iconImage.sprite = item.icon; // Define a imagem do item (ex: a caixa)
+            iconImage.gameObject.SetActive(true); // Liga o desenho na tela
         }
         else
         {
             iconImage.sprite = null;
-            iconImage.enabled = false;
-        }
-    }
-
-    public void DefinirSelecionado(bool estaSelecionado)
-    {
-        if (highlightBorder != null)
-        {
-            highlightBorder.enabled = estaSelecionado;
+            iconImage.gameObject.SetActive(false); // Esconde o ícone se o slot estiver vazio
         }
     }
 }
