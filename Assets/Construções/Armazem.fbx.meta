@@ -3,7 +3,92 @@ guid: e3ef1186a12802d4e9ee2005c2f84a10
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CaixaDePapelao
+    second: {fileID: 2800000, guid: b7b6ab6246125a044b76ae3ca6fd7f8a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: ChaveDeFenda
+    second: {fileID: 2800000, guid: e0b02b03b023e2449a9d8ca8dd813791, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Concrete032_2K-PNG_Color
+    second: {fileID: 2800000, guid: 707bac7bf18f42b4a80baac6bfddcc9e, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Concrete044C_2K-PNG_Color
+    second: {fileID: 2800000, guid: 892d3e9fee3ae3f45b92257c71bfd5a4, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal020_2K-JPG_Color
+    second: {fileID: 2800000, guid: 7e48b40ca10de5c4c8c28241b2339a11, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal020_2K-JPG_Metalness
+    second: {fileID: 2800000, guid: f66993600beb1204199219cd0c1aefd5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal020_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: bcb8870be0d4afd4c87f8ae3a4b2080c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal025_2K-PNG_Color
+    second: {fileID: 2800000, guid: 1bdb5a0cf5a8b644ab8b3860593235af, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal025_2K-PNG_Metalness
+    second: {fileID: 2800000, guid: 92921c50d34a1c8489a8149b39f59c72, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Metal025_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 09bea5a6fba758d4880d19307517c186, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Planks005_2K-PNG_Color
+    second: {fileID: 2800000, guid: 2f65b18429c208743ab3bc65b25767ed, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Planks005_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 64a4678274979094183173147eec07b1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic007_2K-PNG_Color
+    second: {fileID: 2800000, guid: 3b17eceee7f5bc448b9515b23157890a, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic007_2K-PNG_NormalGL
+    second: {fileID: 2800000, guid: e82b89822a3840d41a38a2bcb2d4eef1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Plastic007_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 7ad4677ed03db1343a6261c34a87e891, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood048_2K-JPG_Color
+    second: {fileID: 2800000, guid: de1b37c1a6b47244cbbb5d4a08543845, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Wood048_2K-JPG_Roughness
+    second: {fileID: 2800000, guid: 50b18815300feb9428f28b6b98cfbddc, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

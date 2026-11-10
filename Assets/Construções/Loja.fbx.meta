@@ -3,7 +3,102 @@ guid: 5b9e71171fad4f541aec223f95803573
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CaixaDeLeite
+    second: {fileID: 2800000, guid: 8a704ded53019334785e371f3ec68764, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: CvalePixel
+    second: {fileID: 2800000, guid: 2c7830976bd7c974eae77028b24b689c, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Desconto
+    second: {fileID: 2800000, guid: abe19a46846797646b69216682bfc245, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: EnlatadoINCRASH
+    second: {fileID: 2800000, guid: f172180a4a1a7594f819621f51dfa7c9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LanternaINCRASH
+    second: {fileID: 2800000, guid: 8a9daa137c270ed45989c01a05ceea25, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: LataINCRASH
+    second: {fileID: 2800000, guid: 39d30c134cbf6bc47811d5f1631bcfd3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Refrigerante IN-CRASH
+    second: {fileID: 2800000, guid: 1c06dfe2c50c9944eab61e6865153881, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Refrigerante IN-CRASH-2
+    second: {fileID: 2800000, guid: 102376d105f475f4dbe835a4b356e4c5, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Refrigerante IN-CRASH-3
+    second: {fileID: 2800000, guid: 9ea666f4401cfce47895e084b64e5652, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Sacola
+    second: {fileID: 2800000, guid: 29eb64149a6aaef47a2f56ef3bb08c84, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SalgadinhoINCRASH
+    second: {fileID: 2800000, guid: 8a5a429f4128033408c83a1c307dcbe9, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SorveteINCRASH
+    second: {fileID: 2800000, guid: 0459342fec6f91643831788b2198ac49, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: SucrilhosINCRASH
+    second: {fileID: 2800000, guid: f780b8c4b5a60a544981e378e0eeb8b2, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tiles138_2K-PNG_Color
+    second: {fileID: 2800000, guid: e4641ad4a8143c54aada9f7df83fff8f, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: Tiles138_2K-PNG_Roughness
+    second: {fileID: 2800000, guid: 99fbff51efb8df4459fad70a874521c7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: painted_metal09_diffuse
+    second: {fileID: 2800000, guid: 3d4af1366670a824897e44e8d148bdb1, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: painted_metal_metallic
+    second: {fileID: 2800000, guid: fb7f82156ae769c40b514bb521d9b0e7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: painted_metal_normal_opengl
+    second: {fileID: 2800000, guid: a896aaa005ca0694d96c3b1af3e5a903, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: painted_metal_specular
+    second: {fileID: 2800000, guid: 5328a082b8e10414eb5e233ecde22711, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
