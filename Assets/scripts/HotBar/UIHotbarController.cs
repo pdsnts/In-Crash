@@ -1,43 +1,33 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class UIHotbarController : MonoBehaviour
 {
-    public InventoryManager inventoryManager;
-    public UIHotbarSlot[] slotsUI;
+    [SerializeField] private InventoryManager inventoryManager;
+    [SerializeField] private List<UIHotbarSlot> hotbarSlots;
 
-    void Start()
+    private void Start()
     {
-        AtualizarTodaUI();
+        UpdateUI();
     }
 
-    void Update()
-    {
-        AtualizarSelecaoUI();
-    }
-
-    public void AtualizarTodaUI()
+    public void UpdateUI()
     {
         if (inventoryManager == null) return;
 
-        for (int i = 0; i < slotsUI.Length; i++)
+        for (int i = 0; i < hotbarSlots.Count; i++)
         {
-            if (i < inventoryManager.hotbarSlots.Length)
+            // Lê diretamente do array hotbarSlots do InventoryManager
+            ItemData item = inventoryManager.hotbarSlots[i];
+            
+            if (item != null)
             {
-                ItemData item = inventoryManager.hotbarSlots[i];
-                Sprite icone = (item != null) ? item.icon : null;
-                slotsUI[i].ConfigurarSlot(icone);
+                hotbarSlots[i].UpdateSlot(item);
             }
-        }
-    }
-
-    void AtualizarSelecaoUI()
-    {
-        if (inventoryManager == null) return;
-
-        for (int i = 0; i < slotsUI.Length; i++)
-        {
-            bool estaSelecionado = (i == inventoryManager.selectedSlot);
-            slotsUI[i].DefinirSelecionado(estaSelecionado);
+            else
+            {
+                hotbarSlots[i].UpdateSlot(null);
+            }
         }
     }
 }

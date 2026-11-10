@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 using TMPro;
 
@@ -12,9 +9,11 @@ public class PlayerInteractUI : MonoBehaviour
 
     private void Update()
     {
-        if (playerInteract.GetInteractableObject() != null)
+        IInteractable interactableObject = playerInteract.GetInteractableObject();
+        
+        if (interactableObject != null)
         {
-            Show(playerInteract.GetInteractableObject());
+            Show(interactableObject);
         }
         else
         {
@@ -22,10 +21,10 @@ public class PlayerInteractUI : MonoBehaviour
         }
     }
 
-    private void Show(NPCInteractable npcInteractable)
+    private void Show(IInteractable interactable)
     {
         containerGameObject.SetActive(true);
-        interactTextMeshProUGUI.text = npcInteractable.GetInteractText();
+        interactTextMeshProUGUI.text = interactable.GetInteractText();
     }
 
     private void Hide()

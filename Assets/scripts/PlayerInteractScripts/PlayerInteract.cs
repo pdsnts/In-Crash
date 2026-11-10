@@ -1,7 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 
 public class PlayerInteract : MonoBehaviour
 {
@@ -19,53 +17,57 @@ public class PlayerInteract : MonoBehaviour
             return;
         }
 
-        if (Input.GetKeyDown(KeyCode.E)) {
-            float interactRange = 2f;
-            Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
-            foreach (Collider collider in colliderArray) {
-                if (collider.TryGetComponent(out NPCInteractable npcInteractable))
-                {
-                    npcInteractable.Interact();
-                    break;
-                }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            IInteractable interactableObject = GetInteractableObject();
+            if (interactableObject != null)
+            {
+                interactableObject.Interact();
             }
-        }     
+        }
     }
 
-    public NPCInteractable GetInteractableObject()
+    public IInteractable GetInteractableObject()
     {
         if (dialogueManager != null && dialogueManager.IsDialogueActive)
         {
             return null;
         }
-        List<NPCInteractable> npcInteractableList = new List<NPCInteractable>();
+
+        List<IInteractable> interactableList = new List<IInteractable>();
         float interactRange = 4f;
         Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
+        
         foreach (Collider collider in colliderArray)
         {
-            if (collider.TryGetComponent(out NPCInteractable npcInteractable))
+            // Procura por qualquer objeto que tenha a interface IInteractable (NPC ou Item)
+            if (collider.TryGetComponent(out IInteractable interactable))
             {
-                npcInteractableList.Add(npcInteractable);
-                return npcInteractable;
+                interactableList.Add(interactable);
             }
         }
 
-        NPCInteractable closestNPCInteractable = null;
-        foreach (NPCInteractable npcInteractable in npcInteractableList)
+        IInteractable closestInteractable = null;
+        foreach (IInteractable interactable in interactableList)
         {
-            if (closestNPCInteractable == null)
+            if (closestInteractable == null)
             {
-                closestNPCInteractable = npcInteractable;
-            } else
+                closestInteractable = interactable;
+            }
+            else
             {
-                if (Vector3.Distance(transform.position, npcInteractable.transform.position) < 
-                Vector3.Distance(transform.position, closestNPCInteractable.transform.position))
+                // Compara as distâncias para escolher o interagível mais próximo
+                Transform interactableTransform = (interactable as MonoBehaviour).transform;
+                Transform closestTransform = (closestInteractable as MonoBehaviour).transform;
+
+                if (Vector3.Distance(transform.position, interactableTransform.position) <
+                    Vector3.Distance(transform.position, closestTransform.position))
                 {
-                    closestNPCInteractable = npcInteractable;
+                    closestInteractable = interactable;
                 }
-            } 
+            }
         }
 
-        return closestNPCInteractable;
+        return closestInteractable;
     }
 }
