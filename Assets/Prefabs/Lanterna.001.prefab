@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7708950230163380526}
   - component: {fileID: 4157710808931286784}
   - component: {fileID: 8278036604765281717}
-  - component: {fileID: 4619341845685947219}
   m_Layer: 0
   m_Name: Lanterna.001
   m_TagString: Untagged
@@ -84,17 +83,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4619341845685947219
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 912306882324758179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9444737de662da34bbbf3de7672390de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemData: {fileID: 0}
-  interactText: Coletar Item
