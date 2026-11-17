@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee7cc68f4d85d7d45819ce4c2b332a15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameScene: SampleScene
+  GameScene: CutScene1
   MainMenuPanel: {fileID: 906944634}
   OptionsPanel: {fileID: 737072098}
 --- !u!4 &154261349
